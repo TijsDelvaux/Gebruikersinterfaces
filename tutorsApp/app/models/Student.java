@@ -22,6 +22,8 @@ public class Student {
 	
 	public Language language = Language.Nederlands;
 	
+	public Tutor tutor = null;
+	
 	public static Finder<Long,Student> find = new Finder<Long,Student>(
 			    Long.class, Student.class
 			  ); 
@@ -32,5 +34,9 @@ public class Student {
 	
 	public boolean isTutor(){
 		return false;
+	}
+	
+	public void becomeTutor(){
+		tutor = new Tutor();
 	}
 }

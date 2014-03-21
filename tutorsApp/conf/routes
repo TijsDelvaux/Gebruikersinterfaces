@@ -12,7 +12,8 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 GET     /start                  controllers.Application.start()
 
 # profile page         
-GET     /profile                controllers.Application.profile()
+GET     /profile                controllers.Application.profile()        
+GET     /profile/tutor          controllers.Application.profileTutor()
 
 # search tutor page         
 GET     /searchTutor            controllers.Application.searchTutor()

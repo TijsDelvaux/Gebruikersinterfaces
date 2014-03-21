@@ -1,9 +1,5 @@
 package models;
 
-public class Tutor extends Student{
+public class Tutor{
 
-	@Override
-	public boolean isTutor(){
-		return true;
-	}
 }

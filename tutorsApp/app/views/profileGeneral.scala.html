@@ -1,0 +1,27 @@
+@(student: Student)
+
+@main("ProfileGeneral") {
+    
+<html>
+	
+	<head>
+		<link rel="stylesheet" href="@routes.Assets.at("stylesheets/profile.css")">
+	</head>
+    
+    <body>
+		<div id="centeredmenu">
+		   <ul>
+		      <li><a href="" class="active">@(student.getLanguage().general())</a></li>
+		      <li><a href="/profile/tutor">@(student.getLanguage().tutor())</a></li>
+		   </ul>
+		</div>
+	</body>
+
+</html>
+
+}
+
+
+
+
+

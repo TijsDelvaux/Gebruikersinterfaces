@@ -23,10 +23,30 @@ public enum Language {
 		public String calendar() {
 			return "Kalender";
 		}
+
+		@Override
+		public String general() {
+			return "Algemeen";
+		}
+
+		@Override
+		public String tutor() {
+			return "Bijlesgever";
+		}
+
+		@Override
+		public String wantToBeTutorText() {
+			return "Je bent nog geen lesgever, wil je lesgever worden?";
+		}
+
+		@Override
+		public String activate() {
+			return "Activeer";
+		}
 		
 	}, 
 	
-	Engels{
+	English{
 
 		@Override
 		public String searchTutor() {
@@ -50,15 +70,40 @@ public enum Language {
 			// TODO Auto-generated method stub
 			return null;
 		}
+
+		@Override
+		public String general() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public String tutor() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public String wantToBeTutorText() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public String activate() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 		
 	};
 	
 	public abstract String searchTutor();
-	
 	public abstract String myProfile();
-	
 	public abstract String myReviews();
-	
 	public abstract String calendar();
+	public abstract String general();
+	public abstract String tutor();
+	public abstract String wantToBeTutorText();
+	public abstract String activate();
 	
 }
