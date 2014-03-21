@@ -14,7 +14,7 @@ public class Application extends Controller {
     }
     
     public static Result start(){
-    	return TODO;
+    	return ok(views.html.start.render(new Student()));
     }
 
 }

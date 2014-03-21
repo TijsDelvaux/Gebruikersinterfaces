@@ -20,11 +20,15 @@ public class Student {
 	
 	public String studies;
 	
-	public Language language;
+	public Language language = Language.Nederlands;
 	
 	public static Finder<Long,Student> find = new Finder<Long,Student>(
 			    Long.class, Student.class
 			  ); 
+	
+	public Language getLanguage(){
+		return language;
+	}
 	
 	public boolean isTutor(){
 		return false;
