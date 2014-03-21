@@ -8,5 +8,17 @@ GET     /                           controllers.Application.index()
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
-# startPage         
+# start page         
 GET     /start                  controllers.Application.start()
+
+# profile page         
+GET     /profile                controllers.Application.profile()
+
+# search tutor page         
+GET     /searchTutor            controllers.Application.searchTutor()
+
+# reviews page         
+GET     /reviews                controllers.Application.reviews()
+
+# calendar page         
+GET     /calendar               controllers.Application.calendar()
