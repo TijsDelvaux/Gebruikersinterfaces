@@ -5,13 +5,21 @@
 <html>
     <body>
     
-    <button type="button" onclick=@Application.profile()>@(student.getLanguage().searchTutor())</button>
+    <form action="/searchTutor">
+    <input type="submit" value="@(student.getLanguage().searchTutor())">
+    </form>
     
-    <button type="button" onclick="alert('TODO')">@(student.getLanguage().myProfile())</button>
+    <form action="/profile">
+    <input type="submit" value="@(student.getLanguage().myProfile())">
+    </form>
     
-    <button type="button" onclick="alert('TODO')">@(student.getLanguage().myReviews())</button>
+    <form action="/reviews">
+    <input type="submit" value="@(student.getLanguage().myReviews())">
+    </form>
     
-    <button type="button" onclick="alert('TODO')">@(student.getLanguage().calendar())</button>
+    <form action="/calendar">
+    <input type="submit" value="@(student.getLanguage().calendar())">
+    </form>
     
     </body>
 </html>
