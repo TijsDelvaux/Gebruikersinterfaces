@@ -16,5 +16,21 @@ public class Application extends Controller {
     public static Result start(){
     	return ok(views.html.start.render(new Student()));
     }
+    
+    public static Result profile(){
+    	return TODO;
+    }
+    
+    public static Result searchTutor(){
+    	return TODO;
+    }
+    
+    public static Result reviews(){
+    	return TODO;
+    }
+    
+    public static Result calendar(){
+    	return TODO;
+    }
 
 }
