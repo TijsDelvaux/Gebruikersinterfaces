@@ -46,3 +46,8 @@
    background:#000;
    font-weight:bold;
 }
+#centeredmenu a.test {
+   color:#000;
+   background:#fff;
+   font-weight:#bold;
+}

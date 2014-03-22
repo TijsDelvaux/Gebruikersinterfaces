@@ -1,0 +1,24 @@
+@(student: Student, course: String)
+
+@main("AvailableTutors") {
+    
+<html>
+    <head>
+		<link rel="stylesheet" href="@routes.Assets.at("stylesheets/profile.css")">
+	</head>
+    
+    <body>
+		<div id="centeredmenu">
+            <h2><a class="test">@(student.getLanguage().availableTutors()) @(course)</a></h2>
+            
+		</div>
+	</body>
+
+</html>
+
+}
+
+
+
+
+

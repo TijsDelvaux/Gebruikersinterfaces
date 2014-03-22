@@ -16,7 +16,7 @@ public enum Language {
 
 		@Override
 		public String myReviews() {
-			return "Mijn revieuws";
+			return "Mijn reviews";
 		}
 
 		@Override
@@ -44,6 +44,16 @@ public enum Language {
 			return "Activeer";
 		}
 		
+		@Override
+		public String myCourses() {
+			return "Mijn vakken";
+		}
+		
+		@Override
+		public String availableTutors(){
+			return "Beschikbare lesgevers voor";
+		}
+		
 	}, 
 	
 	English{
@@ -55,44 +65,47 @@ public enum Language {
 
 		@Override
 		public String myProfile() {
-			// TODO Auto-generated method stub
-			return null;
+			return "My profile";
 		}
 
 		@Override
 		public String myReviews() {
-			// TODO Auto-generated method stub
-			return null;
+			return "My reviews";
 		}
 
 		@Override
 		public String calendar() {
-			// TODO Auto-generated method stub
-			return null;
+			return "Calendar";
 		}
 
 		@Override
 		public String general() {
-			// TODO Auto-generated method stub
-			return null;
+			return "General";
 		}
 
 		@Override
 		public String tutor() {
-			// TODO Auto-generated method stub
-			return null;
+			return "Tutor";
 		}
 
 		@Override
 		public String wantToBeTutorText() {
-			// TODO Auto-generated method stub
-			return null;
+			return "You're not a tutor yet, want to become one?";
 		}
 
 		@Override
 		public String activate() {
-			// TODO Auto-generated method stub
-			return null;
+			return "Activate";
+		}
+		
+		@Override
+		public String myCourses(){
+			return "My courses";
+		}
+		
+		@Override
+		public String availableTutors(){
+			return "Available tutors for";
 		}
 		
 	};
@@ -105,5 +118,7 @@ public enum Language {
 	public abstract String tutor();
 	public abstract String wantToBeTutorText();
 	public abstract String activate();
+	public abstract String myCourses();
+	public abstract String availableTutors();
 	
 }

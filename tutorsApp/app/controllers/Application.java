@@ -10,7 +10,8 @@ import views.html.*;
 public class Application extends Controller {
 	
 	private static Student student = new Student(); //DIT MOET ZEKER NOG VERANDEREN, WANNEER WE EEN LOGIN HEBBEN!
-
+	private static Tutor tutor = new Tutor("Hans", "De Vos");
+	
     public static Result index() {
         return redirect(routes.Application.start());
     }
@@ -31,7 +32,11 @@ public class Application extends Controller {
     }
     
     public static Result searchTutor(){
-    	return TODO;
+    	return ok(views.html.myCourses.render(student));
+    }
+    
+    public static Result availableTutors(String course){
+    	return ok(views.html.availableTutors.render(student, course));
     }
     
     public static Result reviews(){
@@ -39,6 +44,10 @@ public class Application extends Controller {
     }
     
     public static Result calendar(){
+    	return TODO;
+    }
+    
+    public static Result mySubjects(){
     	return TODO;
     }
 

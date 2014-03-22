@@ -13,10 +13,11 @@ GET     /start                  controllers.Application.start()
 
 # profile page         
 GET     /profile                controllers.Application.profile()        
-GET     /profile/tutor          controllers.Application.profileTutor()
+GET     /profile/tutor         	controllers.Application.profileTutor()
 
 # search tutor page         
 GET     /searchTutor            controllers.Application.searchTutor()
+GET		/searchTutor/availableTutors/:course		controllers.Application.availableTutors(course: String)
 
 # reviews page         
 GET     /reviews                controllers.Application.reviews()

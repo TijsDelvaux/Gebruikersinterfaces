@@ -1,0 +1,28 @@
+@(student: Student)
+
+@main("MyCourses") {
+    
+<html>
+    <head>
+		<link rel="stylesheet" href="@routes.Assets.at("stylesheets/profile.css")">
+	</head>
+    
+    <body>
+		<div id="centeredmenu">
+            <h2><a class="test">@(student.getLanguage().myCourses())</a></h2>
+            <ul>
+                @for(course <- student.getCourses()) {
+                    <ol><li><a href="/searchTutor/availableTutors/@(course.getCourseName())" class="passive">@(course.getCourseName())</a></li></ol>
+                }
+            </ul>
+		</div>
+	</body>
+
+</html>
+
+}
+
+
+
+
+
