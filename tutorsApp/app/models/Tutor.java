@@ -12,47 +12,57 @@ public class Tutor{
 	@Id
 	public Long id;
 	
-	public String firstName;
+	public Student student;
 	
-	public String lastName;
-	
-	public String eMail;
-	
-	public String Address;
-	
-	public String studies;
-	
-	public Language language = Language.English;
-	
-	public Tutor tutor = null;
+	public List<Language> teachingLanguages =new ArrayList<Language>();
 	
 	public List<Course> myTeachingCourses = new ArrayList<Course>();
 	
-	public Tutor(){
-		
+	private int price;
+	
+	private String description;
+	
+	public Tutor(Student student){
+		this.student = student;
+		teachingLanguages.add(student.language);
 	}
 	
 	//TEST
 	public Tutor(String firstName, String lastName){
-		this.firstName = firstName;
-		this.lastName = lastName;
+//		this.firstName = firstName;
+//		this.lastName = lastName;
 		addTeachingCourse("Modelering van Complexe Systemen");
 		
 	}
 	
-	public static Finder<Long,Student> find = new Finder<Long,Student>(
-			Long.class, Student.class);
+	public static Finder<Long,Tutor> find = new Finder<Long,Tutor>(
+			Long.class, Tutor.class);
 
-	public Language getLanguage() {
-		return language;
+	public List<Language> getTeachingLanguage() {
+		return teachingLanguages;
 	}
 
-	public void setLanguage(Language language) {
-		this.language = language;
+	public void addLanguage(Language language) {
+		teachingLanguages.add(language);
+	}
+	
+	public boolean deleteLanguage(Language language){
+		if(teachingLanguages.size()==1)
+			return false;
+		teachingLanguages.remove(language);
+		return true;
 	}
 	
 	public void addTeachingCourse(String courseName){
 		this.myTeachingCourses.add(new Course(courseName));
+	}
+	
+	public double getPrice(){
+		return price;
+	}
+	
+	public String getDescription(){
+		return description;
 	}
 	
 }

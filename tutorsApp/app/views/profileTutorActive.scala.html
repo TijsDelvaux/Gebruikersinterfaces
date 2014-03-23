@@ -5,7 +5,7 @@
 <html>
 	
 	<head>
-		<link rel="stylesheet" href="@routes.Assets.at("stylesheets/profile.css")">
+		<link rel="stylesheet" href="@routes.Assets.at("stylesheets/tabs.css")">
 	</head>
     
     <body>
@@ -15,6 +15,20 @@
 		      <li><a href="" class="active">@(student.getLanguage().tutor())</a></li>
 		   </ul>
 		</div>
+		
+		<br>
+		
+		<form id="tutorProfile">
+			@(student.getLanguage().tutorCourses()): <input type="checkbox" name="bijlesvakkenTODO" 
+				value="TODO">TODO<br>
+			@(student.getLanguage().myPrice()): <input type="number" name="myPrice" 
+				value="@(student.getTutor().getPrice())" /> @(student.getLanguage().priceUnit())<br>
+			@(student.getLanguage().myDescription()): <br> <textarea rows="4" cols="50" name="myDescription" 
+				form="tutorProfile"> @(student.getTutor().getDescription()) </textarea> <br>
+			@(student.getLanguage().myAvailableData()): TODO <br>
+			@(student.getLanguage().myPlacesForTutoring()): TODO <br>
+		</form> 
+		
 	</body>
 
 </html>

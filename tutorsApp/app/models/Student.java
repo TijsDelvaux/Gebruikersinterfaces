@@ -18,7 +18,7 @@ public class Student {
 	
 	public String eMail;
 	
-	public String Address;
+	public String address;
 	
 	public String studies;
 	
@@ -29,7 +29,8 @@ public class Student {
 	public List<Course> myCourses = new ArrayList<Course>();
 	
 	public Student(){
-		//TEST
+		firstName = "Grietje";
+		lastName = "Peeters";
 		addCourse("Modelering van Complexe Systemen");
 		addCourse("Gedistribueerde Systemen");
 		addCourse("Computer Grafieken");
@@ -48,12 +49,12 @@ public class Student {
 	}
 	
 	public boolean isTutor(){
-		return false;
+		return tutor != null;
 	}
 	
-	//Is dit wel een goed idee?
+	//Is dit wel een goed idee? En waarom niet?
 	public void becomeTutor(){
-		tutor = new Tutor();
+		tutor = new Tutor(this);
 	}
 	
 	//Add a course, only a string necessary
@@ -65,4 +66,10 @@ public class Student {
 	public List<Course> getCourses() {
 		return this.myCourses;
 	}
+	
+	public Tutor getTutor(){
+		return tutor;
+	}
+	
+	
 }
