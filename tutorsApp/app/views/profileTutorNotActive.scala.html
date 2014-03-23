@@ -5,13 +5,17 @@
 <html>
 	
 	<head>
-		<link rel="stylesheet" href="@routes.Assets.at("stylesheets/profile.css")">
+		<link rel="stylesheet" href="@routes.Assets.at("stylesheets/tabs.css")">
 	</head>
+	
+	<header>
+		@student.getLanguage().myProfile()
+	</header>
     
     <body>
-		<div id="centeredmenu">
+		<div id="roundbar-blue">
 		   <ul>
-		      <li><a href="/profile" ">@(student.getLanguage().general())</a></li>
+		      <li><a href="/profile" >@(student.getLanguage().general())</a></li>
 		      <li><a href="" class="active">@(student.getLanguage().tutor())</a></li>
 		   </ul>
 		</div>
@@ -19,7 +23,6 @@
 		<p>
 			@(student.getLanguage().wantToBeTutorText())
 		</p>
-		<!--Hier moet nog aan gewerkt worden: -->
 		<form action="@(student.becomeTutor())">
 	    	<input type="submit" value="@(student.getLanguage().activate())">
 	    </form>

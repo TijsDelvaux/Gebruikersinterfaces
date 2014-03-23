@@ -51,3 +51,72 @@
    background:#fff;
    font-weight:#bold;
 }
+
+p{
+position:relative;
+    top:20px;
+}
+
+form{
+	position:relative;
+    top:20px;
+}
+
+/* -------------------------------------------------- */
+/* roundbar-blue */
+/* -------------------------------------------------- */
+#roundbar-blue {
+	clear:left;
+	float:left;
+	width:100%;
+	background:#80C8FF url(roundbar-blue.gif) 0 25% repeat;
+	font-family:Trebuchet MS, Helvetica, sans-serif;
+	border-bottom:1px solid #49A9FF;
+	overflow:hidden;
+}
+
+#roundbar-blue ul {
+	clear:left;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	left:50%;
+	text-align:center;
+}
+#roundbar-blue ul li {
+	display:block;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	right:50%;
+}
+#roundbar-blue ul li.first {
+	border-left:1px solid #49A9FF;
+}
+#roundbar-blue ul li.last {
+	border-right:1px solid #99D8FF;
+}
+#roundbar-blue ul li a {
+	display:block;
+	margin:0;
+	padding:.4em .8em;
+	color:#000;
+	text-decoration:none;
+	border-left:1px solid #99D8FF;
+	border-right:1px solid #49A9FF;
+	line-height:1.3em;
+}
+#roundbar-blue ul li.active a {
+	background:url(roundbar-blue.gif) 0 75% repeat;
+	font-weight:bold;
+}
+#roundbar-blue ul li a:hover {
+	background:url(roundbar-blue.gif) 0 75% repeat;
+}
+#roundbar-blue ul li a span {
+	display:block;
+}
