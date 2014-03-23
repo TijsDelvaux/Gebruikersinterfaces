@@ -20,7 +20,8 @@ GET     /searchTutor            controllers.Application.searchTutor()
 GET		/searchTutor/availableTutors/:course		controllers.Application.availableTutors(course: String)
 
 # reviews page         
-GET     /reviews                controllers.Application.reviews()
+GET     /reviews/given                controllers.Application.reviewsGiven()
+GET     /reviews             controllers.Application.reviewsReceived()
 
 # calendar page         
 GET     /calendar               controllers.Application.calendar()

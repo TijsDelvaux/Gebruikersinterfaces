@@ -1,15 +1,29 @@
-@(title: String)(content: Html)
+@(student: Student)
 
-<!DOCTYPE html>
-
+@main("ReviewsGet") {
+    
 <html>
-    <head>
-        <title>@title</title>
-        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/hat.png")">
-        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
-    </head>
+	
+	<head>
+		<link rel="stylesheet" href="@routes.Assets.at("stylesheets/tabs.css")">
+	</head>
+	
+	<header>
+		@student.getLanguage().myReviews()
+	</header>
+    
     <body>
-        @content
-    </body>
+		
+		<div id="roundbar-blue">
+		   <ul>
+		      <li><a href="/reviews/received" class="active">@(student.getLanguage().received())</a></li>
+		      <li><a href="">@(student.getLanguage().given())</a></li>
+		   </ul>
+		</div>
+
+	</body>
+
 </html>
+
+}
+

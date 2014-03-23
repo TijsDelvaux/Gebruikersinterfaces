@@ -25,7 +25,8 @@ public enum Language {
 		public String address() {return "Adres";}
 		public String studies() {return "Richting";}
 		public String myLanguage() {return "Mijn taal";}
-		
+		public String given() {return "Gegeven";}
+		public String received() {return "Gekregen";}
 		
 	}, 
 	
@@ -52,7 +53,8 @@ public enum Language {
 		public String address() {return "Address";}
 		public String studies() {return "Studies";}
 		public String myLanguage() {return "My language";}
-		
+		public String given() {return "Given";}
+		public String received() {return "Received";}
 		
 	};
 	
@@ -77,6 +79,8 @@ public enum Language {
 	public abstract String address();
 	public abstract String studies();
 	public abstract String myLanguage();
+	public abstract String given();
+	public abstract String received();
 	
 	
 }
