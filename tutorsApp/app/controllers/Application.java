@@ -39,8 +39,12 @@ public class Application extends Controller {
     	return ok(views.html.availableTutors.render(student, course));
     }
     
-    public static Result reviews(){
-    	return TODO;
+    public static Result reviewsGiven(){
+    	return ok(views.html.reviewsGiven.render(student));
+    }
+    
+    public static Result reviewsReceived(){
+    	return ok(views.html.reviewsGet.render(student));
     }
     
     public static Result calendar(){

@@ -1,6 +1,6 @@
 @(student: Student)
 
-@main("ReviewsGet") {
+@main("ReviewsGiven") {
     
 <html>
 	
@@ -16,8 +16,8 @@
 		
 		<div id="roundbar-blue">
 		   <ul>
-		      <li><a href="/reviews/received" class="active">@(student.getLanguage().received())</a></li>
-		      <li><a href="">@(student.getLanguage().given())</a></li>
+		      <li><a href="" >@(student.getLanguage().received())</a></li>
+		      <li><a href="/reviews/given" class="active">@(student.getLanguage().given())</a></li>
 		   </ul>
 		</div>
 
@@ -26,4 +26,3 @@
 </html>
 
 }
-

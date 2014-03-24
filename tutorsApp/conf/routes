@@ -21,7 +21,7 @@ GET		/searchTutor/availableTutors/:course		controllers.Application.availableTuto
 
 # reviews page         
 GET     /reviews/given                controllers.Application.reviewsGiven()
-GET     /reviews             controllers.Application.reviewsReceived()
+GET     /reviews		             controllers.Application.reviewsReceived()
 
 # calendar page         
 GET     /calendar               controllers.Application.calendar()
